@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote | Sawariya Seth Logistics</title>
+    <meta name="description" content="Request a premium, transparent shipping quote for your glass, fragile cargo, or relocation needs from Firozabad to anywhere in India. Fast response within 15 minutes.">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+    <!-- AOS.js Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <span class="material-symbols-outlined logo-icon">local_shipping</span>
+                <span>SAWARIYA SETH</span>
+            </a>
+            
+            <nav class="desktop-nav">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="services/index.html" class="nav-item">Services</a>
+                <a href="routes/index.html" class="nav-item">Routes</a>
+                <a href="about.html" class="nav-item">About Us</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
+            
+            <div class="flex-center" style="gap: 16px;">
+                <a href="quote.html" class="btn btn-primary header-cta-btn active">Get a Quote</a>
+                <button class="menu-toggle-btn" id="open-drawer" aria-label="Open Menu">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Drawer Backdrop (Mobile) -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <!-- Navigation Drawer (Mobile) -->
+    <aside class="nav-drawer" id="nav-drawer">
+        <div class="drawer-header">
+            <div class="drawer-logo">
+                <span class="material-symbols-outlined">local_shipping</span>
+                <span>SAWARIYA SETH</span>
+            </div>
+            <button class="drawer-close-btn" id="close-drawer" aria-label="Close Menu">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="drawer-nav">
+            <ul class="drawer-list">
+                <li><a href="index.html" class="drawer-link"><span class="material-symbols-outlined">home</span>Home</a></li>
+                <li><a href="services/index.html" class="drawer-link"><span class="material-symbols-outlined">category</span>Services</a></li>
+                <li><a href="routes/index.html" class="drawer-link"><span class="material-symbols-outlined">map</span>Route Network</a></li>
+                <li><a href="about.html" class="drawer-link"><span class="material-symbols-outlined">info</span>About Us</a></li>
+                <li><a href="contact.html" class="drawer-link"><span class="material-symbols-outlined">contact_support</span>Contact</a></li>
+            </ul>
+        </nav>
+        <div class="drawer-footer">
+            <a href="quote.html" class="btn btn-primary btn-full">Get a Quote</a>
+            <div class="drawer-footer-text">© 2026 Sawariya Seth Logistics</div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Page Hero Banner -->
+        <section class="page-hero">
+            <div class="page-hero-overlay"></div>
+            <img src="images/hero_fallback.png" alt="Logistics dispatch board" class="page-hero-img">
+            <div class="container page-hero-content" data-aos="fade-right">
+                <h1 class="page-hero-title">Get a Quote</h1>
+                <p class="page-hero-desc">Request customized freight pricing. Direct, transparent, and built on return-load savings.</p>
+            </div>
+        </section>
+
+        <!-- Quote Request Content -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="grid grid-cols-1 grid-cols-2-md" style="gap: var(--gutter); align-items: start;">
+                    
+                    <!-- Left Column: Form -->
+                    <div class="card" data-aos="fade-right" style="padding: var(--space-xl);">
+                        <h2 style="font-size: 1.5rem; color: var(--primary); margin-bottom: var(--space-lg);">Quote Request Form</h2>
+                        
+                        <!-- Form integration using Web3Forms -->
+                        <form action="https://api.web3forms.com/submit" method="POST" data-submit-type="async">
+                            <!-- Replace with your actual Web3Forms access key -->
+                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                            <input type="hidden" name="subject" value="New Freight Quote Request - Sawariya Seth Logistics">
+                            
+                            <div class="grid grid-cols-1 grid-cols-2-sm" style="gap: 16px;">
+                                <div class="form-group">
+                                    <label class="form-label">Full Name</label>
+                                    <div class="form-input-container">
+                                        <span class="material-symbols-outlined form-input-icon">person</span>
+                                        <input type="text" name="name" class="form-control" placeholder="Enter full name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Phone Number</label>
+                                    <div class="form-input-container">
+                                        <span class="material-symbols-outlined form-input-icon">call</span>
+                                        <input type="tel" name="phone" class="form-control" placeholder="Enter phone number" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 grid-cols-2-sm" style="gap: 16px;">
+                                <div class="form-group">
+                                    <label class="form-label">Pickup Location (From)</label>
+                                    <div class="form-input-container">
+                                        <span class="material-symbols-outlined form-input-icon">location_on</span>
+                                        <input type="text" name="pickup" class="form-control" placeholder="City, State" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Destination (To)</label>
+                                    <div class="form-input-container">
+                                        <span class="material-symbols-outlined form-input-icon">local_shipping</span>
+                                        <input type="text" name="destination" class="form-control" placeholder="City, State" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 grid-cols-2-sm" style="gap: 16px;">
+                                <div class="form-group">
+                                    <label class="form-label">Goods Type</label>
+                                    <div class="form-input-container">
+                                        <span class="material-symbols-outlined form-input-icon">category</span>
+                                        <select name="goods_type" class="form-control" style="padding-left: 44px;">
+                                            <option value="Glassware / Bangles">Sheet Glass / Glass Bangles</option>
+                                            <option value="Industrial Goods">Industrial Freight</option>
+                                            <option value="Household Shifting">Household Shifting</option>
+                                            <option value="Office Relocation">Office Relocation</option>
+                                            <option value="Other">Other Specialized Cargo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Approx Loading Date</label>
+                                    <div class="form-input-container">
+                                        <span class="material-symbols-outlined form-input-icon">calendar_month</span>
+                                        <input type="date" name="loading_date" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom: var(--space-lg);">
+                                <label class="form-label">Additional Instructions / Cargo Weight</label>
+                                <textarea name="message" class="form-control" rows="3" placeholder="Approx weight in tons, size, special fragile instructions, etc."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full btn-lg">Submit Request</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Right Column: WhatsApp Direct & FAQs -->
+                    <div style="display: flex; flex-direction: column; gap: var(--gutter);" data-aos="fade-left">
+                        <!-- Direct Action Card -->
+                        <div class="card glass-card" style="border: 1px solid var(--primary-light); background-color: rgba(46, 139, 87, 0.05);">
+                            <h3 class="service-title" style="display: flex; align-items: center; gap: 8px;">
+                                <span class="material-symbols-outlined" style="color: var(--primary-light);">chat</span>
+                                <span>Prefer Direct WhatsApp?</span>
+                            </h3>
+                            <p class="service-desc" style="margin-bottom: 20px;">Skip the form and chat directly with our dispatch manager on WhatsApp. Ideal for immediate pricing and urgent bookings.</p>
+                            <a href="https://wa.me/919876543210?text=Hello,%20I%20want%20a%20logistics%20quote%20for%20a%20shipment%20from%20Firozabad" target="_blank" class="btn btn-primary btn-full">
+                                <span class="material-symbols-outlined">message</span>
+                                <span>Inquire on WhatsApp</span>
+                            </a>
+                        </div>
+                        
+                        <!-- FAQs -->
+                        <div>
+                            <h3 style="font-size: 1.25rem; color: var(--primary); margin-bottom: var(--space-md);">Quotation Help & FAQs</h3>
+                            
+                            <div class="faq-item">
+                                <button class="faq-trigger">
+                                    <span>How fast will I get a quote?</span>
+                                    <span class="material-symbols-outlined faq-icon">expand_more</span>
+                                </button>
+                                <div class="faq-content">
+                                    <p>Since we are owner-operated, we bypass complex corporate pricing chains. You will receive a direct quotation via call or WhatsApp within 15 minutes of submission.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-trigger">
+                                    <span>What factors affect my rate?</span>
+                                    <span class="material-symbols-outlined faq-icon">expand_more</span>
+                                </button>
+                                <div class="faq-content">
+                                    <p>Rates are determined by distance, transit speed, cargo weight, and whether a return load is available. If your shipment aligns with one of our active return corridors, we pass substantial cost discounts to you.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-trigger">
+                                    <span>Are rates inclusive of tolls and taxes?</span>
+                                    <span class="material-symbols-outlined faq-icon">expand_more</span>
+                                </button>
+                                <div class="faq-content">
+                                    <p>Yes, all quotes provided by Sawariya Seth Logistics are fully transparent and inclusive of road tolls, state border taxes, fuel surcharges, and standard transit coverage. No hidden fees.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="grid footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="material-symbols-outlined footer-logo-icon">local_shipping</span>
+                        <span>SAWARIYA SETH</span>
+                    </a>
+                    <p class="footer-desc">The standard in precision glass transport and industrial logistics across India. Dedicated. Safe. Secure.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="Facebook"><span class="material-symbols-outlined">share</span></a>
+                        <a href="#" class="social-link" aria-label="Location"><span class="material-symbols-outlined">near_me</span></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services/glass-bangle-export.html" class="footer-link">Glass Export Cargo</a></li>
+                        <li><a href="services/ftl.html" class="footer-link">Full Truck Load (FTL)</a></li>
+                        <li><a href="services/ptl.html" class="footer-link">Part Truck Load (PTL)</a></li>
+                        <li><a href="services/household-shifting.html" class="footer-link">Household Relocation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">Active Routes</h3>
+                    <ul class="footer-links">
+                        <li><a href="routes/firozabad-to-bihar.html" class="footer-link">Firozabad to Patna (Bihar)</a></li>
+                        <li><a href="routes/firozabad-to-odisha.html" class="footer-link">Firozabad to Bhubaneswar</a></li>
+                        <li><a href="routes/firozabad-to-andhra-pradesh.html" class="footer-link">Firozabad to Andhra Pradesh</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">Support</h3>
+                    <div class="footer-contact-item">
+                        <span class="material-symbols-outlined footer-contact-icon">call</span>
+                        <span>+91 98765 43210</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="material-symbols-outlined footer-contact-icon">mail</span>
+                        <span>info@sawariyasethlogistics.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="material-symbols-outlined footer-contact-icon">location_on</span>
+                        <span>Main Bypass Road, Near Glass City Mall, Firozabad, UP 283203</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Sawariya Seth Logistics. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span>SYSTEMS ONLINE</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Bottom Action Bar (Mobile Only) -->
+    <div class="sticky-mobile-bar">
+        <a href="tel:+919876543210" class="sticky-bar-btn sticky-btn-call">
+            <span class="material-symbols-outlined">call</span>
+            <span>Call Now</span>
+        </a>
+        <div class="sticky-bar-divider"></div>
+        <a href="https://wa.me/919876543210?text=I%20am%20interested%20in%20freight%20services%20from%20Firozabad" target="_blank" class="sticky-bar-btn sticky-btn-inquiry">
+            <span class="material-symbols-outlined">chat</span>
+            <span>Inquiry</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            disable: 'mobile'
+        });
+    </script>
+</body>
+</html>
